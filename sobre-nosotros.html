@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros | APXcompara</title>
+<meta name="description" content="Quiénes somos, cómo trabajamos y cómo se financia APXcompara.">
+<link rel="canonical" href="https://apxcompara.es/sobre-nosotros.html">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF7F2; --ink:#16151A; --navy:#1E2A4A; --navy-light:#30416B;
+  --coral:#FF5C5C; --mint:#E3F1E9; --mustard:#F5B301; --line: rgba(22,21,26,0.12);
+  --max: 1180px; font-size:17px;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:'Source Serif 4', Georgia, serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
+h1,h2,h3,.grotesk{font-family:'Bricolage Grotesque', system-ui, sans-serif; letter-spacing:-0.01em;}
+.mono{font-family:'IBM Plex Mono', monospace;}
+a{color:inherit;}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 24px;}
+
+.topbar{background:var(--navy); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.04em; padding:7px 0;}
+.topbar .wrap{display:flex; justify-content:space-between;}
+.topbar span{opacity:.75;}
+
+header.site{background:var(--paper); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:100;}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+.logo{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:1.5rem; display:flex; align-items:baseline; gap:2px; text-decoration:none;}
+.logo .tag{background:var(--coral); color:#fff; font-size:.6rem; font-family:'IBM Plex Mono',monospace; font-weight:600; padding:2px 6px; border-radius:2px; margin-left:8px; letter-spacing:.05em; transform:rotate(-3deg);}
+.navlinks{display:flex; gap:28px; list-style:none; margin:0; padding:0; font-family:'Bricolage Grotesque',sans-serif; font-weight:600; font-size:.92rem;}
+.navlinks a{text-decoration:none; padding-bottom:2px; border-bottom:2px solid transparent;}
+.navlinks a:hover{border-color:var(--coral);}
+@media (max-width:820px){.navlinks{display:none;}}
+
+.crumbs{font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6b6b74; padding:14px 0; border-bottom:1px dashed var(--line);}
+.crumbs a{text-decoration:none; color:#6b6b74;}
+.crumbs a:hover{color:var(--coral);}
+
+.page-head{background:var(--navy); color:#fff; padding:44px 0 34px;}
+.page-head h1{font-size:clamp(1.7rem,3.6vw,2.5rem); font-weight:800; margin:0 0 8px;}
+.page-head p{color:rgba(255,255,255,.75); font-family:'IBM Plex Mono',monospace; font-size:12.5px; margin:0;}
+
+.legal{max-width:760px; margin:0 auto; padding:40px 24px 70px;}
+.legal h2{font-size:1.25rem; font-weight:800; color:var(--navy); margin:34px 0 12px; padding-bottom:8px; border-bottom:2px solid var(--ink);}
+.legal h3{font-size:1.02rem; font-weight:700; color:var(--navy); margin:22px 0 10px;}
+.legal p{margin:0 0 16px; font-size:.98rem;}
+.legal ul{margin:0 0 16px; padding-left:22px;}
+.legal li{margin-bottom:8px;}
+.legal table{width:100%; border-collapse:collapse; margin:16px 0 26px; font-size:.9rem;}
+.legal th,.legal td{padding:10px 12px; border:1px solid var(--line); text-align:left;}
+.legal thead th{background:var(--navy); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase;}
+.legal tbody tr:nth-child(odd){background:#F3EFE7;}
+.note{background:#FDEDED; border:1px solid var(--line); border-radius:4px; padding:16px 18px; font-size:.9rem; margin:20px 0;}
+.note.info{background:var(--mint);}
+.toc-legal{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 30px; font-family:'IBM Plex Mono',monospace; font-size:12px;}
+.toc-legal a{text-decoration:none; padding:6px 12px; border:1px solid var(--line); border-radius:20px; color:var(--navy);}
+.toc-legal a:hover{background:var(--navy); color:#fff; border-color:var(--navy);}
+
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:900px; margin:0 auto; padding:40px 24px 70px;}
+@media (max-width:700px){.contact-grid{grid-template-columns:1fr;}}
+.contact-grid h3{color:var(--navy); margin-top:0;}
+.contact-form label{display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:#6b6b74; margin:14px 0 6px;}
+.contact-form input, .contact-form textarea{width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:3px; font-family:'Source Serif 4',serif; font-size:.95rem;}
+.contact-form textarea{min-height:120px; resize:vertical;}
+.contact-form button{margin-top:18px; background:var(--navy); color:#fff; border:none; padding:12px 22px; border-radius:3px; font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:.9rem; cursor:pointer;}
+.contact-info-card{background:#fff; border:1px solid var(--line); border-radius:4px; padding:22px;}
+.contact-info-card p{font-size:.92rem; margin:0 0 10px;}
+
+.about-hero{max-width:760px; margin:0 auto; padding:40px 24px 10px;}
+.about-hero p.lede{font-size:1.12rem; color:#33323a; border-left:3px solid var(--coral); padding-left:16px; margin-bottom:26px;}
+.value-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:30px 0;}
+@media (max-width:700px){.value-grid{grid-template-columns:1fr;}}
+.value-card{background:#fff; border:1px solid var(--line); border-radius:4px; padding:18px;}
+.value-card h4{margin:0 0 8px; font-family:'Bricolage Grotesque',sans-serif; color:var(--navy); font-size:.98rem;}
+.value-card p{margin:0; font-size:.88rem; color:#5c5b62;}
+
+footer.site{background:var(--navy); color:rgba(255,255,255,.8); padding:52px 0 26px; margin-top:20px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:34px;}
+@media (max-width:720px){.foot-grid{grid-template-columns:1fr 1fr;}}
+.foot-grid h5{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--mustard); margin:0 0 14px;}
+.foot-grid ul{list-style:none; margin:0; padding:0;}
+.foot-grid li{margin-bottom:9px; font-size:.88rem;}
+.foot-grid a{text-decoration:none; color:rgba(255,255,255,.75);}
+.foot-grid a:hover{color:#fff;}
+.foot-logo{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:1.3rem; color:#fff;}
+.foot-disclosure{font-size:.8rem; color:rgba(255,255,255,.55); max-width:420px; margin-top:14px; line-height:1.6;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.15); margin-top:40px; padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.78rem; color:rgba(255,255,255,.5); font-family:'IBM Plex Mono',monospace;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap"><span>Guías de compra online, sin filtros · actualizado ago. 2026</span><span>ES 🇪🇸</span></div>
+</div>
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">APX<span style="color:var(--coral)">compara</span><span class="tag">chollos & fiabilidad</span></a>
+    <nav><ul class="navlinks">
+      <li><a href="index.html#opiniones">Opiniones</a></li>
+      <li><a href="index.html#cupones">Cupones</a></li>
+      <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul></nav>
+  </div>
+</header>
+<div class="crumbs"><div class="wrap"><a href="index.html">Inicio</a> / Sobre nosotros</div></div>
+
+<div class="page-head"><div class="wrap"><h1>Sobre APXcompara</h1><p>Quiénes somos y cómo trabajamos</p></div></div>
+<div class="about-hero">
+  <p class="lede">Analizamos tiendas online virales —Hacoo, Shein, Temu y similares— con opiniones honestas, sin filtros y sin miedo a decir lo que no funciona.</p>
+  <p>Nacimos porque cada vez que una tienda nueva se hacía viral en redes, era imposible encontrar una opinión clara sobre si merecía la pena comprar ahí. Nuestro objetivo es simple: contarte lo bueno y lo malo antes de que metas la tarjeta.</p>
+
+  <div class="value-grid">
+    <div class="value-card"><h4>Independientes</h4><p>No representamos a ninguna de las marcas que analizamos.</p></div>
+    <div class="value-card"><h4>Actualizado</h4><p>Revisamos los artículos periódicamente conforme cambian las políticas de cada tienda.</p></div>
+    <div class="value-card"><h4>Sin inventar datos</h4><p>Cuando no podemos confirmar algo, lo decimos explícitamente.</p></div>
+  </div>
+
+  <h3>Cómo nos financiamos</h3>
+  <p>APXcompara se sostiene con publicidad (Google AdSense) y, en algunos casos, enlaces de afiliado. Esto no cambia nuestras opiniones: los artículos reflejan lo que encontramos, sea o no favorable a la tienda analizada.</p>
+
+  <h3>¿Tienes una sugerencia?</h3>
+  <p>Si quieres que analicemos una tienda concreta o crees que algo en un artículo está desactualizado, <a href="contacto.html">escríbenos</a>.</p>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">APXcompara</div>
+        <p class="foot-disclosure">Contenido informativo e independiente sobre marketplaces online. Este sitio muestra anuncios publicitarios (Google AdSense) y puede incluir enlaces de afiliado. Las opiniones se basan en información pública y experiencias reportadas por usuarios; no representamos a las marcas mencionadas.</p>
+      </div>
+      <div><h5>Contenido</h5><ul><li><a href="index.html">Opiniones</a></li><li><a href="hacoo-opiniones-es-fiable.html">Hacoo</a></li></ul></div>
+      <div><h5>Legal</h5><ul><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="cookies.html">Política de cookies</a></li><li><a href="aviso-legal.html">Aviso legal</a></li></ul></div>
+      <div><h5>Sitio</h5><ul><li><a href="index.html">Inicio</a></li><li><a href="sobre-nosotros.html">Sobre nosotros</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 APXcompara</span><span>Ads by Google · ads.txt verificado</span></div>
+  </div>
+</footer>
+</body>
+</html>
